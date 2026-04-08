@@ -22,7 +22,7 @@ services:
                 ipv4_address: 192.168.70.131
     oai-udr:
         container_name: "oai-udr"
-        image: oai-udr:develop
+        image: oaisoftwarealliance/oai-udr:v1.5.1
         environment:
             - TZ=Europe/Paris
             - INSTANCE=0
@@ -36,7 +36,7 @@ services:
             - MYSQL_IPV4_ADDRESS=192.168.70.131
             - MYSQL_USER=test
             - MYSQL_PASS=test
-            - DB_CONNECTION_TIMEOUT=300 # Reset the connection to the DB after expiring the timeout (in second) currently can't be changed
+            - DB_CONNECTION_TIMEOUT=300
             - MYSQL_DB=oai_db
             - WAIT_MYSQL=120
             - USE_FQDN_DNS=yes
@@ -53,7 +53,7 @@ services:
                 ipv4_address: 192.168.70.136
     oai-udm:
         container_name: "oai-udm"
-        image: oai-udm:develop
+        image: oaisoftwarealliance/oai-udm:v1.5.1
         environment:
             - TZ=Europe/Paris
             - INSTANCE=0
@@ -81,7 +81,7 @@ services:
                 ipv4_address: 192.168.70.137
     oai-ausf:
         container_name: "oai-ausf"
-        image: oai-ausf:develop
+        image: oaisoftwarealliance/oai-ausf:v1.5.1
         environment:
             - TZ=Europe/Paris
             - INSTANCE_ID=0
@@ -108,7 +108,7 @@ services:
                 ipv4_address: 192.168.70.138
     oai-nrf:
         container_name: "oai-nrf"
-        image: oai-nrf:develop
+        image: oaisoftwarealliance/oai-nrf:v1.5.1
         environment:
             - TZ=Europe/Paris
             - NRF_INTERFACE_NAME_FOR_SBI=eth0
@@ -122,7 +122,7 @@ services:
                 ipv4_address: 192.168.70.130
     oai-amf:
         container_name: "oai-amf"
-        image: oai-amf:develop
+        image: oaisoftwarealliance/oai-amf:v1.5.1
         environment:
             - TZ=Europe/paris
             - INSTANCE=0
@@ -141,7 +141,7 @@ services:
             - SERVED_GUAMI_AMF_SET_ID_1=1
             - PLMN_SUPPORT_MCC=208
             - PLMN_SUPPORT_MNC=98
-            - PLMN_SUPPORT_TAC=00ab00
+            - PLMN_SUPPORT_TAC=0xab00
             - SST_0=222
             - SD_0=123
             - SST_1=1
@@ -194,7 +194,7 @@ services:
                 ipv4_address: 192.168.70.132
     oai-smf:
         container_name: "oai-smf"
-        image: oai-smf:develop
+        image: oaisoftwarealliance/oai-smf:v1.5.1
         environment:
             - TZ=Europe/Paris
             - INSTANCE=0
@@ -219,13 +219,13 @@ services:
             - NRF_IPV4_ADDRESS=192.168.70.130
             - NRF_PORT=80
             - NRF_API_VERSION=v1
-            - USE_LOCAL_SUBSCRIPTION_INFO=yes  #Set to yes if SMF uses local subscription information instead of from an UDM
-            - USE_NETWORK_INSTANCE=no  #Set yes if network instance is to be used for given UPF
+            - USE_LOCAL_SUBSCRIPTION_INFO=yes
+            - USE_NETWORK_INSTANCE=no
             - NRF_FQDN=oai-nrf
             - REGISTER_NRF=yes
             - DISCOVER_UPF=yes
             - USE_FQDN_DNS=yes
-            - HTTP_VERSION=1        # Default: 1
+            - HTTP_VERSION=1
             - UE_MTU=1500
             - DNN_NI0=oai
             - DNN_NI1=oai2
@@ -246,8 +246,8 @@ services:
             - SESSION_AMBR_DL1=1000Mbps
             - SESSION_AMBR_UL2=1000Mbps
             - SESSION_AMBR_DL2=1000Mbps
-            - DEFAULT_CSCF_IPV4_ADDRESS=127.0.0.1  # only needed when ims is being used
-            - ENABLE_USAGE_REPORTING=no # Set yes if UE USAGE REPORTING is to be done at UPF
+            - DEFAULT_CSCF_IPV4_ADDRESS=127.0.0.1
+            - ENABLE_USAGE_REPORTING=no
         depends_on:
             - oai-nrf
             - oai-amf
@@ -256,7 +256,7 @@ services:
                 ipv4_address: 192.168.70.133
     oai-upf:
         container_name: "oai-upf"
-        image: oai-spgwu-tiny:develop
+        image: oaisoftwarealliance/oai-spgwu-tiny:v1.5.1
         environment:
             - TZ=Europe/Paris
             - PID_DIRECTORY=/var/run
@@ -270,7 +270,7 @@ services:
             - MCC=208
             - MNC=98
             - MNC03=098
-            - TAC=1
+            - TAC=43776
             - GW_ID=1
             - THREAD_S1U_PRIO=80
             - S1U_THREADS=8
@@ -309,7 +309,7 @@ services:
             public_net:
                 ipv4_address: 192.168.70.134
     oai-ext-dn:
-        image: trf-gen-cn5g:latest
+        image: oaisoftwarealliance/trf-gen-cn5g:latest
         privileged: true
         container_name: oai-ext-dn
         entrypoint: /bin/bash -c \
@@ -325,9 +325,6 @@ services:
             public_net:
                 ipv4_address: 192.168.70.135
 networks:
-    # public_net:
-    #     external:
-    #         name: demo-oai-public-net
     public_net:
         driver: bridge
         name: demo-oai-public-net
