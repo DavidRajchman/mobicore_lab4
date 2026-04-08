@@ -141,7 +141,7 @@ services:
             - SERVED_GUAMI_AMF_SET_ID_1=1
             - PLMN_SUPPORT_MCC=208
             - PLMN_SUPPORT_MNC=98
-            - PLMN_SUPPORT_TAC=0xa000
+            - PLMN_SUPPORT_TAC=00ab00
             - SST_0=222
             - SD_0=123
             - SST_1=1

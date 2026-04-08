@@ -1,0 +1,148 @@
+oai-nrf   | [2026-04-08 16:16:31.864] [nrf_app] [debug] NF update for Heartbeat, current time 1775657791864
+oai-nrf   | [2026-04-08 16:16:31.864] [nrf_app] [debug] Set NF status to REGISTERED
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [debug] SCTP Association Change event received
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [debug] Add new association with Id (8)
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info] ----------------------
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info] Local addresses: 
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info]     - IPv4 Addr: 192.168.70.132
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info] ----------------------
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info] Peer addresses: 
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info]     - IPv4 Addr: 192.168.70.149
+oai-amf   | [2026-04-08 14:16:31.904] [sctp] [info] ----------------------
+oai-amf   | [2026-04-08 14:16:31.904] [ngap] [debug] Ready to handle new NGAP SCTP association request (id 8)
+oai-amf   | [2026-04-08 14:16:31.904] [ngap] [debug] Create a new gNB context with assoc_id (8)
+oai-amf   | [2026-04-08 14:16:31.905] [sctp] [info] [Assoc_id 8, Socket 10] Received a message (length 63) from port 9487, on stream 0, PPID 60
+oai-amf   | [2026-04-08 14:16:31.905] [ngap] [debug] Handling SCTP payload from SCTP Server on assoc_id (8), stream_id (0), instreams (2), outstreams (2)
+oai-amf   | [2026-04-08 14:16:31.905] [ngap] [debug] Decoded NGAP message, procedure code 21, present 1
+oai-amf   | InitiatingMessage ::= {
+oai-amf   |     procedureCode: 21
+oai-amf   |     criticality: 0 (reject)
+oai-amf   |     value: NGSetupRequest ::= {
+oai-amf   |         protocolIEs: ProtocolIE-Container ::= {
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 27
+oai-amf   |                 criticality: 0 (reject)
+oai-amf   |                 value: GlobalGNB-ID ::= {
+oai-amf   |                     pLMNIdentity: 02 F8 89
+oai-amf   |                     gNB-ID: 00 00 03
+oai-amf   |                 }
+oai-amf   |             }
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 82
+oai-amf   |                 criticality: 1 (ignore)
+oai-amf   |                 value: my5gRANTester
+oai-amf   |             }
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 102
+oai-amf   |                 criticality: 0 (reject)
+oai-amf   |                 value: SupportedTAList ::= {
+oai-amf   |                     SupportedTAItem ::= {
+oai-amf   |                         tAC: 00 AB 00
+oai-amf   |                         broadcastPLMNList: BroadcastPLMNList ::= {
+oai-amf   |                             BroadcastPLMNItem ::= {
+oai-amf   |                                 pLMNIdentity: 02 F8 89
+oai-amf   |                                 tAISliceSupportList: SliceSupportList ::= {
+oai-amf   |                                     SliceSupportItem ::= {
+oai-amf   |                                         s-NSSAI: S-NSSAI ::= {
+oai-amf   |                                             sST: DE
+oai-amf   |                                             sD: 00 00 7B
+oai-amf   |                                         }
+oai-amf   |                                     }
+oai-amf   |                                 }
+oai-amf   |                             }
+oai-amf   |                         }
+oai-amf   |                     }
+oai-amf   |                 }
+oai-amf   |             }
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 21
+oai-amf   |                 criticality: 1 (ignore)
+oai-amf   |                 value: 2 (v128)
+oai-amf   |             }
+oai-amf   |         }
+oai-amf   |     }
+oai-amf   | }
+oai-amf   | [2026-04-08 14:16:31.905] [ngap] [debug] [gNB Assoc Id 8] Sending ITTI NG Setup Request message to TASK_AMF_N2
+oai-amf   | InitiatingMessage ::= {
+oai-amf   |     procedureCode: 21
+oai-amf   |     criticality: 0 (reject)
+oai-amf   |     value: NGSetupRequest ::= {
+oai-amf   |         protocolIEs: ProtocolIE-Container ::= {
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 27
+oai-amf   |                 criticality: 0 (reject)
+oai-amf   |                 value: GlobalGNB-ID ::= {
+oai-amf   |                     pLMNIdentity: 02 F8 89
+oai-amf   |                     gNB-ID: 00 00 03
+oai-amf   |                 }
+oai-amf   |             }
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 82
+oai-amf   |                 criticality: 1 (ignore)
+oai-amf   |                 value: my5gRANTester
+oai-amf   |             }
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 102
+oai-amf   |                 criticality: 0 (reject)
+oai-amf   |                 value: SupportedTAList ::= {
+oai-amf   |                     SupportedTAItem ::= {
+oai-amf   |                         tAC: 00 AB 00
+oai-amf   |                         broadcastPLMNList: BroadcastPLMNList ::= {
+oai-amf   |                             BroadcastPLMNItem ::= {
+oai-amf   |                                 pLMNIdentity: 02 F8 89
+oai-amf   |                                 tAISliceSupportList: SliceSupportList ::= {
+oai-amf   |                                     SliceSupportItem ::= {
+oai-amf   |                                         s-NSSAI: S-NSSAI ::= {
+oai-amf   |                                             sST: DE
+oai-amf   |                                             sD: 00 00 7B
+oai-amf   |                                         }
+oai-amf   |                                     }
+oai-amf   |                                 }
+oai-amf   |                             }
+oai-amf   |                         }
+oai-amf   |                     }
+oai-amf   |                 }
+oai-amf   |             }
+oai-amf   |             NGSetupRequestIEs ::= {
+oai-amf   |                 id: 21
+oai-amf   |                 criticality: 1 (ignore)
+oai-amf   |                 value: 2 (v128)
+oai-amf   |             }
+oai-amf   |         }
+oai-amf   |     }
+oai-amf   | }
+oai-amf   | [2026-04-08 14:16:31.906] [ngap] [debug] Received TAC 0xab00
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [info] Received NGSetupRequest message, handling
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] [gNB Assoc ID 8] Handle NG Setup Request...
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] Parameters: assoc_id 8, stream 0
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] Update gNB context with assoc id (8)
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] RAN Node Info, Global RAN Node ID: 0x300, MCC 208, MNC 98
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] IE RanNodeName: my5gRANTester
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] IE DefaultPagingDRX: 2
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [debug] TAC configured 40960, TAC received 43776
+oai-amf   | [2026-04-08 14:16:31.906] [amf_n2] [error] [gNB ID 768] No common PLMN between gNB and AMF, encoding NG_SETUP_FAILURE with cause (Unknown PLMN)
+oai-amf   | UnsuccessfulOutcome ::= {
+oai-amf   |     procedureCode: 21
+oai-amf   |     criticality: 0 (reject)
+oai-amf   |     value: NGSetupFailure ::= {
+oai-amf   |         protocolIEs: ProtocolIE-Container ::= {
+oai-amf   |             NGSetupFailureIEs ::= {
+oai-amf   |                 id: 15
+oai-amf   |                 criticality: 1 (ignore)
+oai-amf   |                 value: 4 (unknown-PLMN-or-SNPN)
+oai-amf   |             }
+oai-amf   |             NGSetupFailureIEs ::= {
+oai-amf   |                 id: 107
+oai-amf   |                 criticality: 1 (ignore)
+oai-amf   |                 value: 2 (v5s)
+oai-amf   |             }
+oai-amf   |         }
+oai-amf   |     }
+oai-amf   | }
+oai-amf   | [2026-04-08 14:16:31.906] [ngap] [debug] Encoded size (17)
+oai-amf   | [2026-04-08 14:16:31.906] [sctp] [debug] [Socket 10, Assoc ID 8] Sending buffer 0x774c6c002690 of 17 bytes on stream 0 with PPID 60
+oai-amf   | [2026-04-08 14:16:31.906] [sctp] [debug] Successfully sent 17 bytes on stream 0
+oai-amf   | [2026-04-08 14:16:31.906] [ngap] [debug] Free NGAP Message PDU
+oai-amf   | [2026-04-08 14:16:31.906] [ngap] [debug] Free NGAP Message PDU
+oai-nrf   | [2026-04-08 16:16:33.841] [nrf_app] [info] 
+oai-nrf   | Handle heartbeat timeout (NF update), NF instance ID 292d1973-915d-4314-85f9-eaabcdff501c, time 1775657773779, current ms 1775657793841
