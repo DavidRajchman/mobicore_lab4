@@ -228,7 +228,7 @@ services:
             - HTTP_VERSION=1
             - UE_MTU=1500
             - DNN_NI0=oai
-            - DNN_NI1=oai2
+            - DNN_NI1=oai.ipv4 #UE3 change
             - DNN_NI2=oai3
             - TYPE0=IPv4
             - DNN_RANGE0=12.1.1.2 - 12.1.1.253
@@ -236,8 +236,8 @@ services:
             - DNN_RANGE2=12.3.1.2 - 12.3.1.253
             - NSSAI_SST0=222
             - NSSAI_SD0=123
-            - NSSAI_SST1=1
-            - NSSAI_SD1=1
+            - NSSAI_SST1=222 #UE3 change
+            - NSSAI_SD1=123 #UE3 change
             - NSSAI_SST2=2
             - NSSAI_SD2=1
             - SESSION_AMBR_UL0=1000Mbps
@@ -289,12 +289,12 @@ services:
             - NRF_FQDN=oai-nrf
             - NSSAI_SST_0=222
             - NSSAI_SD_0=123
-            - NSSAI_SST_1=1
-            - NSSAI_SD_1=1
+            - NSSAI_SST_1=222 # UE3 change
+            - NSSAI_SD_1=123 # UE3 change
             - NSSAI_SST_2=2
             - NSSAI_SD_2=1
             - DNN_0=oai
-            - DNN_1=oai2
+            - DNN_1=oai.ipv4 # UE3 change
             - DNN_2=oai3
         depends_on:
             - oai-nrf
